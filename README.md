@@ -40,3 +40,5 @@ This will result in the following shortest path:
 
 If this graph was indicated as undirected, the following shortest path should be expected:
 4, 7, 9, 6, 8, 5, 
+
+If a path from source to destination does not exist, output.txt is not created or overwritten. 
