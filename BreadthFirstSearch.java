@@ -65,6 +65,10 @@ public class BreadthFirstSearch {
 			
 			// find path from source to destination
 			List<Integer> path = bfs(G, source, destination);
+			if (path == null) {
+				System.out.println("NOTE: Path from " + source + " to " + destination + " does not exist.");
+				return;
+			}
 			
 			// write to output file
 			File file = new File(outputFileName);
@@ -105,7 +109,6 @@ public class BreadthFirstSearch {
 		// create parent map defined as vertex mapped to vertex's parent
 		Map<Integer, Integer> parentMap = new HashMap<Integer, Integer>();
 		if (!bfsHelper(G, s, d, parentMap)) {
-			System.out.println("Path from " + s + " to " + d + " does not exist.");
 			return null;
 		}
 		// construct path using parentMap
