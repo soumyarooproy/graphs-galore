@@ -31,7 +31,8 @@ This algorithm takes an a graph, a source vertex, a destination vertex and retur
 
 After compiling all files, run BFS as shown. The first argument is the file corresponding to the desired graph. The second argument is an integer source vertex. The third argument is the integer destination vertex.
 ```
-$ BreadthFirstSearch.java input_directed_unweighted.txt 4 5
+$ javac *.java
+$ java BreadthFirstSearch input_directed_unweighted.txt 4 5
 ```
 
 This will result in the following shortest path:
