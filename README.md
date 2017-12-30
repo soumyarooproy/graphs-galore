@@ -3,7 +3,7 @@
 
 ## graphs-galore Structure
 
-![graphsUML](graphsUML.png)
+![graphsUML](images/graphsUML.png)
 
 ## Implementation
 
@@ -13,9 +13,9 @@ Implementations of the following graph algorithms are included:
 
 ## Input Graphs
 
-Refer to input_directed_unweighted.txt for an input file that represents a graph. First line of an input file must indicate if the graph is directed or undirected. The following lines correspond to edges. For an unweighted graph, each edge is composed of 2 integer vertices. For a weighted graph, each edge is composed of 2 integer vertices and then the weight corresponding to that edge. A visual representation of the graph in input_directed_unweighted.txt is shown here.
+Refer to input_directed_unweighted.txt for an input file that represents a graph. First line of an input file must indicate if the graph is directed or undirected. The rest of the lines correspond to either unconnected vertices or edges. For an unweighted graph, each edge is composed of 2 integer vertices. For a weighted graph, each edge is composed of 2 integer vertices and then the weight corresponding to that edge. A visual representation of the graph in input_directed_unweighted.txt is shown here.
 
-![nput_directed_unweighted](input_directed_unweighted.png)
+![nput_directed_unweighted](images/input_directed_unweighted.png)
 
 ## Assumptions
 
