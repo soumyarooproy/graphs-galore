@@ -92,25 +92,7 @@ public class BreadthFirstSearch {
 			System.out.println("ERROR: could not write file " + outputFileName + ".");
 			e1.printStackTrace();
 		}
-		
-		/*
-		// small example 1 using undirected graph
-		GraphInterface<SimpleEdge> G = new DiGraph();
-		G.addEdge(new SimpleEdge(1, 2));
-		G.addEdge(new SimpleEdge(2, 3));
-		G.addEdge(new SimpleEdge(1, 4));
-		G.addEdge(new SimpleEdge(4, 3));
-		G.addEdge(new SimpleEdge(4, 5));
-		G.addEdge(new SimpleEdge(3, 5));
-		G.addEdge(new SimpleEdge(3, 6));
-		G.addEdge(new SimpleEdge(5, 6));
-		G.addVertex(7);
-		G.addVertex(8);
-		System.out.println("Example 1: ");
-		G.printGraph();
-		System.out.println("\nPath from 1 to 6: ");
-		System.out.println(bfs(G, 1, 6));
-		*/
+
 	}
 	
 	public static List<Integer> bfs(GraphInterface<SimpleEdge> G, int s, int d) {
