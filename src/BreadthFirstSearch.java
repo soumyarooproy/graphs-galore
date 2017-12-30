@@ -43,15 +43,21 @@ public class BreadthFirstSearch {
 			while (scanner.hasNextLine()) {
 				String line = scanner.nextLine();
 				String[] split = line.split("\\s+");
-				if (split.length != 2) {
+				if (split.length == 1) {
+					int vertex1 = Integer.parseInt(split[0]);
+					G.addVertex(vertex1);
+				}
+				else if (split.length == 2) {
+					int vertex1 = Integer.parseInt(split[0]);
+					int vertex2 = Integer.parseInt(split[1]);
+					G.addEdge(new SimpleEdge(vertex1, vertex2));
+				}
+				else { 
 					System.out.println("ERROR: Each line is a Graph edge that consists of two vertex integers separated by a space");
-					System.out.println("Note: BFS is applied to unweighted graphs only.");
+					System.out.println("NOTE: BFS is applied to unweighted graphs only.");
 					scanner.close();
 					return;
 				}
-				int vertex1 = Integer.parseInt(split[0]);
-				int vertex2 = Integer.parseInt(split[1]);
-				G.addEdge(new SimpleEdge(vertex1, vertex2));
 			}
 			scanner.close();
 			if (!G.containsVertex(source)) {
@@ -98,6 +104,8 @@ public class BreadthFirstSearch {
 		G.addEdge(new SimpleEdge(3, 5));
 		G.addEdge(new SimpleEdge(3, 6));
 		G.addEdge(new SimpleEdge(5, 6));
+		G.addVertex(7);
+		G.addVertex(8);
 		System.out.println("Example 1: ");
 		G.printGraph();
 		System.out.println("\nPath from 1 to 6: ");
