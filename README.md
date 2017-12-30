@@ -58,6 +58,7 @@ $ javac *.java
 $ java StronglyConnectedComponents input_directed_unweighted.txt
 ```
 This will result in the following strongly connected componenets (1 per line):
+
 1, 4, 7, 
 
 2, 5, 8, 
