@@ -59,7 +59,7 @@ public class FastPrimMST {
 				else if (split.length == 3) {
 					int vertex1 = Integer.parseInt(split[0]);
 					int vertex2 = Integer.parseInt(split[1]);
-					int weight = Integer.parseInt(split[2]);
+					double weight = Double.parseDouble(split[2]);
 					G.addEdge(new WeightedEdge(vertex1, vertex2, weight));
 				}
 				else {
