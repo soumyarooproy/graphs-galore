@@ -18,7 +18,7 @@ public class SimpleEdge {
 	
 	@Override
 	public String toString() {
-		return "(" + from + ", " + to + ")";
+		return from + " " + to;
 	}
 
 }
