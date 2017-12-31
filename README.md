@@ -19,7 +19,11 @@ Implementations of the following graph algorithms are included:
 
 Refer to input_directed_unweighted.txt for an input file that represents a graph. First line of an input file must indicate if the graph is directed or undirected. The rest of the lines correspond to either unconnected vertices or edges. For an unweighted graph, each edge is composed of 2 integer vertices. For a weighted graph, each edge is composed of 2 integer vertices and then the weight corresponding to that edge. A visual representation of the graph in input_directed_unweighted.txt is shown here.
 
-![nput_directed_unweighted](images/input_directed_unweighted.png)
+![input_directed_unweighted](images/input_directed_unweighted.png)
+
+A visual representation of the graph in input_undirected_weighted.txt is shown here.
+
+![input_undirected_weighted](images/input_undirected_weighted.png)
 
 ## Assumptions
 
@@ -82,4 +86,4 @@ The fast version of Prim's algorithm is used in the same manner.
 $ javac *.java
 $ java FastPrimMST input_undirected_weighted.txt
 ```
-Both calls will create an output.txt in which the first line denotes the overall cost of the MST found and the rest of the lines denote the edges in the MST.
+Both calls will create an output.txt in which the first line denotes the overall cost of the MST found and the rest of the lines denote the edges in the MST. For the input_undirected_wighted.txt example, an overall MST cost of -8.0 is expected and the MST is composed of 4 edges: (1, 2), (2, 5), (5, 4), (2, 3).
