@@ -21,10 +21,11 @@ public class WeightedGraph extends GenericGraph<WeightedEdge> {
 	public void addEdge(WeightedEdge e) {
 		int source = e.getFromVertex();
 		int destination = e.getToVertex();
+		double weight = e.getWeight();
 		addVertex(source);
 		addVertex(destination);
 		vMap.get(source).add(e);
-		vMap.get(destination).add(e);
+		vMap.get(destination).add(new WeightedEdge(destination, source, weight));
 		numEdges++;
 	}
 	
