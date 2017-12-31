@@ -13,6 +13,7 @@ Implementations of the following graph algorithms are included:
 
 - Breadth First Search
 - Strongly Connected Components
+- Minimum Spanning Tree
 
 ## Input Graphs
 
@@ -28,7 +29,7 @@ Refer to input_directed_unweighted.txt for an input file that represents a graph
 
 # Breadth First Search
 
-This algorithm takes an a graph, a source vertex, a destination vertex and returns the shortest path from the source to the destination. This will function for either undirected or directed graphs as long as the graph is unweighted.
+This algorithm takes in a graph, a source vertex, a destination vertex and returns the shortest path from the source to the destination. This will function for either undirected or directed graphs as long as the graph is unweighted.
 
 ## Usage
 
@@ -38,7 +39,7 @@ $ javac *.java
 $ java BreadthFirstSearch input_directed_unweighted.txt 4 5
 ```
 
-This will result in the following shortest path:
+This will write to output.txt the shortest path desired:
 4, 1, 7, 9, 6, 8, 2, 5,
 
 If this graph was indicated as undirected, the following shortest path should be expected:
@@ -57,10 +58,28 @@ The only argument is the file name corresponding the the desired graph.
 $ javac *.java
 $ java StronglyConnectedComponents input_directed_unweighted.txt
 ```
-This will result in the following strongly connected componenets (1 per line):
+This will write to output.txt the graph's strongly connected componenets (1 scc per line):
 
 1, 4, 7, 
 
 2, 5, 8, 
 
 3, 6, 9, 
+
+# Minimum Spanning Tree
+
+Two versions of Prim's minimum spaning tree (MST) algorithms are included. PrimMST.java solves for the MST naively in O(mn) run time and FastPrimMST.java solves for the MST using heaps in O(mlogn) run time where m is the number of edges and n is the number of vertices in the graph. These algorithms takes in a connected undirected and weighted graph and returns the overall cost of the MST found and the edges in the MST. The edge weights of the graph are general and can be negative or non-negative.
+
+## Usage
+
+The only argument is the file name corresponding to the desired graph.
+```
+$ javac *.java
+$ java PrimMST input_undirected_weighted.txt
+```
+The fast version of Prim's algorithm is used in the same manner.
+```
+$ javac *.java
+$ java FastPrimMST input_undirected_weighted.txt
+```
+Both calls will create an output.txt in which the first line denotes the overall cost of the MST found and the rest of the lines denote the edges in the MST.
