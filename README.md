@@ -31,6 +31,13 @@ A visual representation of the graph in `input_undirected_weighted.txt` is shown
 - Weights are assumed to be of type double.
 - Vertices and edges can be added but not removed.
 
+# Compilation
+
+Compile all the source files using:
+```
+$ javac src/*.java
+```
+
 # Breadth First Search
 
 This algorithm takes in a graph, a source vertex, a destination vertex and returns the shortest path from the source to the destination. This will function for either undirected or directed graphs as long as the graph is unweighted.
@@ -39,8 +46,7 @@ This algorithm takes in a graph, a source vertex, a destination vertex and retur
 
 The first argument is the file name corresponding to the desired graph. The second argument is an integer source vertex. The third argument is the integer destination vertex.
 ```
-$ javac *.java
-$ java BreadthFirstSearch input_directed_unweighted.txt 4 5
+$ java -cp src BreadthFirstSearch input_directed_unweighted.txt 4 5
 ```
 
 This will write to output.txt the shortest path desired:
@@ -57,14 +63,13 @@ If a path from source to destination does not exist, output.txt is not created o
 
 # Strongly Connected Componenets
 
-This algorithm takes in a directed unweighted graph and returns a list of the strongly connected componenets.
+This algorithm takes in a directed unweighted graph and returns a list of the strongly connected components (SCC).
 
 ## Usage
 
-The only argument is the file name corresponding the the desired graph.
+Run the SCC algorithm on a directed graph as follows. The only argument is the file name corresponding to the desired graph.
 ```
-$ javac *.java
-$ java StronglyConnectedComponents input_directed_unweighted.txt
+$ java -cp src StronglyConnectedComponents input_directed_unweighted.txt
 ```
 This will write to output.txt the graph's strongly connected componenets (1 scc per line):
 ```
@@ -81,15 +86,14 @@ Two implementations of Prim's MST algorithms are included. `PrimMST.java` solves
 
 ## Usage
 
-The only argument is the file name corresponding to the desired graph.
+Run the MST algorithm on undirected graph as follows. The only argument is the file name corresponding to the desired graph.
 ```
-$ javac *.java
-$ java PrimMST input_undirected_weighted.txt
+$ java -cp src PrimMST input_undirected_weighted.txt
 ```
+
 The fast version of Prim's algorithm is used in the same manner.
 ```
-$ javac *.java
-$ java FastPrimMST input_undirected_weighted.txt
+$ java -cp src FastPrimMST input_undirected_weighted.txt
 ```
 
 The runs above will create `output.txt` in which the first line denotes the overall cost of the MST found and the rest of the lines denote the edges in the MST. For the `input_undirected_wighted.txt` example, an overall MST cost of `-8.0` is expected and the MST is composed of 4 edges: `(1, 2), (2, 5), (5, 4), (2, 3)`.
